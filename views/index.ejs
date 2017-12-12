@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<link href="/stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<div class="containers">
+	    <h1 class="deep-purple lighten-3 center"><%= title %></h1>
+	    <form action="/new" method="post">
+	    	
+	    	<h2 class="green lighten-3">From :</h2><br>
+	    	<h5>Your Email / Username: <a class="btn btn-floating btn-small cyan pulse"><i class="material-icons">email</i></a></h5>
+	    	<input type="text" name="fromemail"><br>
+	    	<h5>Your password : <a class="btn btn-floating btn-small cyan pulse"><i class="material-icons">edit</i></a></h5>
+	    	<input type="password" name="password"><br>
+	    	
+	    	<h2 class="lime lighten-3">To :</h2><br>
+	    	<h4>Who do you want to send to ?</h4>
+	    	<br>
+	    	<h5>Email : <a class="btn btn-floating btn-small cyan pulse"><i class="material-icons">email</i></a></h5>
+	    	<input type="text" name="toemail">
+	    	
+	    	<h2 class="yellow lighten-2">Compose :</h2><br>
+	    	<h5>Subject : <a class="btn btn-floating btn-small cyan pulse"><i class="material-icons">subject</i></a></h5>
+	    	<input type="text" name="subject"><br>
+	    	<h5>Content : <a class="btn btn-floating btn-small cyan pulse"><i class="material-icons">create</i></a></h5>
+	    	<textarea name="content" class="materialize-textarea"></textarea>
+	    	<br>
+	    	<div class="file-field input-field">
+		      	<div class="btn">
+		        	<span>File</span>
+		        	<input type="file" name="attachment1" multiple>
+		      	</div>
+		      	<div class="file-path-wrapper">
+		        	<input class="file-path validate" type="text">
+		      	</div>
+		    </div>
+	    	<br>
+	    	<div class="file-field input-field">
+		      	<div class="btn">
+		        	<span>File</span>
+		        	<input type="file" name="attachment2" multiple>
+		      	</div>
+		      	<div class="file-path-wrapper">
+		        	<input class="file-path validate" type="text">
+		      	</div>
+		    </div>
+	    	<br>
+	    	<div class="file-field input-field">
+		      	<div class="btn">
+		        	<span>File</span>
+		        	<input type="file" name="attachment3" multiple>
+		      	</div>
+		      	<div class="file-path-wrapper">
+		        	<input class="file-path validate" type="text">
+		      	</div>
+		    </div>
+	    	<br><br><br>
+	    	<input type="submit" name="send" value="Send Email" class="btn-large waves-effect waves-light blue">
+	    </form>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/javascripts/materialize.js"></script>
+</html>

@@ -1,0 +1,5 @@
+---
+applications:
+ - name: eml
+   random-route: true
+   memory: 100M
